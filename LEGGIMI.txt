@@ -1,0 +1,43 @@
+CARLO CAIRE · SITO PORTFOLIO
+============================
+
+Contenuto della cartella
+- index.html ............ la pagina del sito
+- img/ .................. immagini
+- fonts/ ................ font Mont (Regular, SemiBold, Heavy)
+- Carlo_Caire_Portfolio_Graphic_2026.pdf ... PDF scaricabile dal sito
+- .nojekyll ............. file tecnico per GitHub Pages (non cancellarlo)
+
+PUBBLICARE SU GITHUB PAGES (gratis)
+1. Crea un account su github.com (se non ce l'hai).
+2. In alto a destra: "+" > "New repository".
+   - Nome consigliato: carlocaire.github.io  (sostituisci con il TUO nome utente GitHub + .github.io)
+     Così il sito sarà su https://NOMEUTENTE.github.io
+   - Visibilità: Public. Clicca "Create repository".
+3. Nella pagina del repository clicca "uploading an existing file".
+   Trascina TUTTO il contenuto di questa cartella (index.html, img, fonts, il PDF, .nojekyll)
+   e clicca "Commit changes".
+   Nota: .nojekyll è un file nascosto; su Mac premi Cmd+Shift+. nel Finder per vederlo.
+4. Vai su Settings > Pages. In "Build and deployment" scegli
+   Source: "Deploy from a branch", Branch: "main" / "(root)", poi Save.
+5. Dopo 1-2 minuti il sito è online all'indirizzo mostrato in quella pagina.
+
+COLLEGARE UN DOMINIO TUO (es. carlocaire.it)
+1. Compra il dominio (Aruba, Register.it, Namecheap...).
+2. Su GitHub: Settings > Pages > "Custom domain": scrivi carlocaire.it e salva.
+3. Nel pannello del dominio aggiungi questi record DNS:
+   - 4 record A per carlocaire.it verso:
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+   - 1 record CNAME per www verso NOMEUTENTE.github.io
+4. Attendi la propagazione (da pochi minuti a 24 ore), poi spunta "Enforce HTTPS".
+
+AGGIORNARE IL SITO
+Carica i file modificati nello stesso repository ("Add file" > "Upload files"):
+quelli con lo stesso nome vengono sostituiti.
+
+NOTA SUL FONT
+Mont è un font commerciale (Fontfabric). Verifica che la tua licenza
+copra l'uso web prima di pubblicare il sito.

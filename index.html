@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carlo Caire · Graphic designer · Milano</title>
+<meta name="description" content="Portfolio di Carlo Caire, graphic designer e direttore creativo a Milano: cover artwork, brand identity, campagne pubblicitarie e progettazione di prodotto.">
+<meta property="og:title" content="Carlo Caire · Portfolio">
+<meta property="og:description" content="Graphic designer e direttore creativo a Milano.">
+<meta property="og:image" content="img/k_karaba.jpg">
+<link rel="icon" type="image/png" href="img/logo_cc_dark.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+@font-face{font-family:"Mont";src:url("fonts/mont-regular.woff") format("woff");font-weight:400;font-display:swap}
+@font-face{font-family:"Mont";src:url("fonts/mont-semibold.woff") format("woff");font-weight:600;font-display:swap}
+@font-face{font-family:"Mont Heavy";src:url("fonts/mont-heavy.woff") format("woff");font-weight:800;font-display:swap}
+
+:root{
+  --paper:#EEF0F4; --paper-2:#E3E6ED; --ink:#121420; --muted:#5A6072; --line:#C9CEDA;
+  --accent:#2F3DDB; --on-accent:#FFFFFF; --tile:#FFFFFF;
+  --f-display:"Mont Heavy","Mont","Montserrat","Helvetica Neue",Arial,sans-serif;
+  --f-text:"Mont","Montserrat","Helvetica Neue",Arial,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#0E1018; --paper-2:#161926; --ink:#E8EAF2; --muted:#9BA1B6; --line:#2A2F40;
+    --accent:#8C96FF; --on-accent:#0E1018; --tile:#F3F4F8;
+  }
+  :root:not([data-theme="light"]) .lg-d{display:none}
+  :root:not([data-theme="light"]) .lg-l{display:block}
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#0E1018; --paper-2:#161926; --ink:#E8EAF2; --muted:#9BA1B6; --line:#2A2F40;
+  --accent:#8C96FF; --on-accent:#0E1018; --tile:#F3F4F8;
+}
+:root[data-theme="dark"] .lg-d{display:none}
+:root[data-theme="dark"] .lg-l{display:block}
+
+*{box-sizing:border-box}
+body{text-rendering:geometricPrecision;font-kerning:normal;background:var(--paper);color:var(--ink);font-family:var(--f-text);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{padding-inline:var(--gut);max-width:1440px;margin-inline:auto}
+.lg-l{display:none}
+
+.label{font-family:var(--f-text);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.display{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.bar nav{display:flex;gap:clamp(12px,2.2vw,26px);flex-wrap:wrap}
+.bar a{text-decoration:none}
+.bar nav a:hover{color:var(--accent)}
+.mark img{width:40px;height:auto}
+@media (max-width:760px){.bar nav{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(28px,5vw,64px) 0}
+.hero-top{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.hero h1{font-size:clamp(46px,10.4vw,160px);margin:8px 0 0}
+.hero-logo{width:clamp(72px,11vw,150px);flex:none}
+.hero-sub{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-top:clamp(20px,3vw,36px);padding-bottom:clamp(24px,3vw,40px)}
+.hero-sub p{margin:0;font-size:clamp(18px,1.8vw,24px);line-height:1.35;max-width:32ch}
+.hero-sub p b{color:var(--accent);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin:0}
+.facts div{border-top:1px solid var(--ink);padding-top:8px}
+.facts dd{margin:4px 0 0;font-size:14px;line-height:1.4}
+@media (max-width:760px){.hero-sub{grid-template-columns:1fr}.hero-logo{display:none}}
+
+.hmood{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:clamp(150px,21vw,300px);gap:clamp(4px,.6vw,8px)}
+.hmood figure{margin:0;position:relative;overflow:hidden}
+.hmood img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hmood figcaption{position:absolute;left:0;bottom:0;padding:6px 10px;background:rgba(14,16,24,.72);color:#EEF0F4;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.h2{grid-column:span 2}.h3{grid-column:span 3}.h4{grid-column:span 4}.h5{grid-column:span 5}
+@media (max-width:760px){.hmood{grid-auto-rows:160px}.hmood .h2,.hmood .h3,.hmood .h4,.hmood .h5{grid-column:span 6}.hmood figure:last-child{grid-column:span 12}}
+.wall{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;background:var(--ink);padding:3px}
+.wall figure{margin:0;overflow:hidden}
+.wall img{width:100%;aspect-ratio:1;object-fit:cover}
+.wall figure:first-child{grid-column:span 2;grid-row:span 2}
+@media (max-width:760px){.wall{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.wall-cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:12px}
+
+/* sections */
+section.case{padding-block:clamp(56px,8vw,112px);border-top:1px solid var(--line)}
+.case-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(20px,4vw,64px);margin-bottom:clamp(28px,4vw,48px)}
+.case-head h2{font-size:clamp(30px,3.5vw,52px);margin:10px 0 0;overflow-wrap:break-word}
+.case-head .kicker{font-size:clamp(17px,1.6vw,21px);line-height:1.4;margin:0 0 20px;max-width:40ch}
+.meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;margin:0 0 24px}
+.meta div{border-top:1px solid var(--line);padding-top:6px}
+.meta dd{margin:3px 0 0;font-size:14px;line-height:1.45}
+.body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 32px}
+.body h3{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin:0 0 6px;color:var(--accent)}
+.body p{margin:0;max-width:60ch;font-size:14.5px}
+@media (max-width:860px){.case-head{grid-template-columns:1fr}.body{grid-template-columns:1fr}}
+.sub-h{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:clamp(40px,6vw,72px) 0 18px;border-top:1px solid var(--ink);padding-top:12px}
+.sub-h h3{font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.4vw,32px);letter-spacing:-.01em;margin:0}
+.sub-h p{margin:0;max-width:56ch;font-size:14.5px;color:var(--muted)}
+
+.grid{display:grid;gap:clamp(8px,1vw,14px)}
+.g-covers{grid-template-columns:repeat(5,minmax(0,1fr))}
+.g-covers figure{margin:0}
+.g-covers figcaption{margin-top:8px;font-size:12.5px;line-height:1.3;font-weight:600}
+.g-covers figcaption span{display:block;color:var(--muted);font-size:11.5px;font-weight:400}
+@media (max-width:1000px){.g-covers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.g-covers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.g-sound{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+.g-sound .stack{display:grid;gap:inherit;grid-template-columns:1fr 1fr}
+.g-sound .wide{grid-column:1/-1}
+.g-sound img{width:100%;height:100%;object-fit:cover}
+.g-sound .duo{display:grid;grid-template-columns:1.45fr 1fr;gap:inherit;aspect-ratio:2.6/1;contain:size}
+@media (max-width:760px){.g-sound .duo{grid-template-columns:1fr;aspect-ratio:auto;contain:none}}
+@media (max-width:760px){.g-sound{grid-template-columns:1fr}}
+
+.g-logos{grid-template-columns:repeat(4,minmax(0,1fr))}
+.logo{background:var(--tile);aspect-ratio:4/3;display:block;padding:9% 14% 16%;margin:0;position:relative}
+.logo img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.logo figcaption{position:absolute;left:12px;bottom:10px;right:12px;font-size:9.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#6A6F80}
+@media (max-width:760px){.g-logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.mood{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(6px,.8vw,12px)}
+.mood figure{margin:0;position:relative;overflow:hidden;background:var(--paper-2)}
+.mood img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mood figcaption{position:absolute;left:0;bottom:0;padding:6px 10px;background:rgba(14,16,24,.72);color:#EEF0F4;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.s4{grid-column:span 4}.s5{grid-column:span 5}.s7{grid-column:span 7}.s8{grid-column:span 8}.s12{grid-column:span 12}
+.r32{aspect-ratio:3/2}.r11{aspect-ratio:1/1}.r125{aspect-ratio:12/5}
+@media (max-width:760px){.mood>figure{grid-column:span 12;aspect-ratio:3/2!important}}
+
+.g-digital{grid-template-columns:repeat(6,minmax(0,1fr));align-items:end;background:#E3E6ED;padding:clamp(16px,3vw,40px)}
+.g-digital figure{margin:0}
+.g-digital img{mix-blend-mode:multiply}
+@media (max-width:760px){.g-digital{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.subcap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px}
+
+.g-land{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g-land img{width:100%;aspect-ratio:1100/748;object-fit:cover}
+.g-art{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:clamp(8px,1vw,14px)}
+.g-art img{width:100%;aspect-ratio:3/4.15;object-fit:cover}
+@media (max-width:760px){.g-land{grid-template-columns:1fr 1fr}.g-art{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.also{background:var(--ink);color:var(--paper);border-top:0}
+.also .label{color:color-mix(in srgb,var(--paper) 62%,var(--ink))}
+.also .meta div{border-color:color-mix(in srgb,var(--paper) 22%,var(--ink))}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,48px) clamp(16px,2vw,28px)}
+.feat figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.feat .pair{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:100%;gap:8px;aspect-ratio:2/1}
+.feat .pair img{width:100%;height:100%;object-fit:cover}
+.feat .pair.three{grid-template-columns:1fr 1fr 1fr}
+.feat .pair>*{min-height:0;min-width:0;overflow:hidden}
+.feat .pair{contain:size}
+.feat .draw{background:#fff;padding:8px;min-height:0}
+.feat .draw img{object-fit:contain}
+.feat .strip{height:clamp(90px,9vw,130px);display:flex;align-items:center;justify-content:center;gap:16px;padding:10px 14px}
+.feat .strip img{height:100%;min-width:0;object-fit:contain;flex:0 1 auto}
+.feat .strip p{margin:0;font-size:12px;line-height:1.5;color:#3A3F52;max-width:24ch;flex:none}
+.feat .strip p span{display:block;font-weight:600;color:#121420}
+.feat figcaption{margin-top:6px;display:flex;gap:16px;align-items:flex-start;justify-content:space-between}
+.feat figcaption b{display:block;font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.01em;line-height:1}
+.feat figcaption .label{display:block;margin:8px 0}
+.feat figcaption p{margin:0;font-size:14px;line-height:1.55;max-width:56ch;opacity:.85}
+.award{flex:none;width:112px;text-align:center}
+.award img{width:72px;margin:0 auto 8px;background:#fff;padding:6px}
+.award .label{line-height:1.5;letter-spacing:.14em}
+@media (max-width:860px){.feat{grid-template-columns:1fr}}
+@media (max-width:480px){.feat .strip p{display:none}}
+
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px)}
+.about h3{margin:0 0 12px}
+.about ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.about li{border-top:1px solid var(--line);padding-top:8px;font-size:14.5px;line-height:1.4;font-weight:600}
+.about li span{display:block;color:var(--muted);font-size:12.5px;font-weight:400}
+.about p{margin:0 0 14px;max-width:48ch}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+.contact{padding-block:clamp(56px,8vw,112px);border-top:1px solid var(--line)}
+.contact-top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.contact h2{font-size:clamp(44px,8.4vw,128px);margin:12px 0 28px}
+.contact h2 em{font-style:normal;color:var(--accent)}
+.contact-top img{width:clamp(80px,12vw,170px);margin-bottom:28px}
+.c-rows{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.c-rows div{border-top:1px solid var(--ink);padding-top:10px;min-width:0}
+.c-rows .v{font-size:clamp(15px,1.4vw,18px);margin-top:6px;overflow-wrap:anywhere;font-weight:600}
+.copy{margin-top:10px;font:inherit;font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:var(--accent);color:var(--on-accent);border:0;padding:9px 14px;cursor:pointer}
+@media (max-width:860px){.c-rows{grid-template-columns:1fr 1fr}.contact-top img{display:none}}
+@media (max-width:480px){.c-rows{grid-template-columns:1fr}}
+footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:no-preference){
+  .wall img,.mood img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .wall figure:hover img,.mood figure:hover img{transform:scale(1.04)}
+}
+.igrow{display:flex;flex-wrap:wrap;gap:6px 16px;margin:-6px 0 18px}.ig{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--ink);text-decoration:none;line-height:1}.ig:hover{color:var(--accent)}.igi{width:14px;height:14px;flex:none;color:var(--accent)}
+.klink{display:inline-flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:24px;text-decoration:none;font-size:13px;font-weight:600}
+.klink img{width:88px;height:auto}
+.klink:hover span{color:var(--accent)}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Carlo Caire, inizio pagina">
+      <img class="lg-d" src="img/logo_cc_dark.png" alt="Logo Carlo Caire">
+      <img class="lg-l" src="img/logo_cc_light.png" alt="Logo Carlo Caire">
+    </a>
+    <nav class="label" aria-label="Sezioni">
+      <a href="#kayros">Kayros Music</a>
+      <a href="#inhabit">Inhabit Sound</a>
+      <a href="#identita">Identità</a>
+      <a href="#digital">Social e adv</a>
+      <a href="#art">CCreative Art</a>
+      <a href="#also">Prodotto</a>
+      <a href="#contatti">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <p class="label">Portfolio · Milano</p>
+    <div class="hero-top">
+      <h1 class="display">Carlo Caire</h1>
+      <div class="hero-logo"><img class="lg-d" src="img/logo_cc_dark.png" alt=""><img class="lg-l" src="img/logo_cc_light.png" alt=""></div>
+    </div>
+    <div class="hero-sub">
+      <p>Graphic designer e direttore creativo. Progetto <b>identità visive, cover artwork, comunicazione digitale e prodotti</b> per etichette, brand e aziende.</p>
+      <dl class="facts">
+        <div><dt class="label">Ora</dt><dd>Grafica e direzione creativa, Kayros Music</dd></div>
+        <div><dt class="label">Insegno</dt><dd>Graphic Design, Ferrari Fashion School</dd></div>
+        <div><dt class="label">Premio</dt><dd>Vincitore Archiproducts Design Awards 2023</dd></div>
+        <div><dt class="label">Disponibile</dt><dd>In-house, part-time o a progetto su Milano</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="hmood" aria-label="Selezione di lavori">
+      <figure class="h3"><img src="img/k_karaba.jpg" alt="Cover di Karabà, Latif Monet"></figure>
+      <figure class="h4"><img src="img/is_posters_wide.jpg" alt="Poster Inhabit Sound"></figure>
+      <figure class="h5"><img src="img/mb_giricasa.jpg" alt="Immagine coordinata GiriCasa"></figure>
+      <figure class="h3"><img src="img/ecl_foto_tavolo.jpg" style="object-position:center 30%" alt="Lampada ECLITTICA accesa"></figure>
+      <figure class="h4"><img src="img/cc_vulcano.jpg" style="object-position:center 55%" alt="Collage digitale: vasetto che diventa un vulcano"></figure>
+      <figure class="h2"><img src="img/k_soldi.jpg" alt="Cover di Soldi, Kriim"></figure>
+      <figure class="h3"><img src="img/mb_spirito.jpg" alt="Merchandising Spirito"></figure>
+    </div>
+    <div class="wall-cap label"><span>Una selezione di lavori 2023–2026</span><a href="#kayros">Vai ai progetti ↓</a></div>
+  </div>
+
+  <!-- KAYROS -->
+  <section class="case" id="kayros">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Art direction musicale</p>
+          <h2 class="display">Kayros Music</h2>
+        </div>
+        <div>
+          <p class="kicker" style="margin-bottom:8px">Un'identità visiva per ogni artista, dentro un'unica etichetta.</p>
+          <a class="klink" href="https://www.kayrosmusic.it/" style="margin:0 0 22px"><span>kayrosmusic.it ↗</span></a>
+          <dl class="meta">
+            <div><dt class="label">Cliente</dt><dd>Kayros Music, comunità Kayrós ETS. Dal 2024 in collaborazione con Universal Music Italia</dd></div>
+            <div><dt class="label">Ruolo</dt><dd>Graphic designer e direzione creativa</dd></div>
+            <div><dt class="label">Periodo</dt><dd>Marzo 2024 – oggi</dd></div>
+            <div><dt class="label">Output</dt><dd>Cover di singoli ed EP, visual per i social, script video</dd></div>
+          </dl>
+          <div class="body">
+            <div><h3>Il contesto</h3><p>Kayros Music è un'etichetta discografica nata da un'idea di Don Claudio Burgio per valorizzare la musica come strumento educativo, espressivo e di crescita personale all'interno della comunità Kayrós ETS. Nel 2024 ha avviato una collaborazione con Universal Music Italia, che ha ampliato le possibilità creative del progetto e ne ha rafforzato la visibilità a livello nazionale.</p></div>
+            <div><h3>Come lavoro</h3><p>Parto dal brano e dall'artista, poi scelgo il linguaggio: fotografia rielaborata, collage, illustrazione, pittura digitale o sola tipografia.</p></div>
+            <div><h3>Supporto digitale</h3><p>Oltre alla cover accompagno l'artista nel lancio: visual in più formati, storie per i social e script per i video, lavorando insieme a videomaker e fotografi.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-covers">
+        <figure><img src="img/k_karaba.jpg" alt="Cover di Karabà" loading="lazy"><figcaption>Karabà<span>Latif Monet</span></figcaption></figure>
+        <figure><img src="img/k_mamuthones.jpg" alt="Cover di Mamuthones" loading="lazy"><figcaption>Mamuthones<span>Latif Monet</span></figcaption></figure>
+        <figure><img src="img/k_abitudini.jpg" alt="Cover di Abitudini" loading="lazy"><figcaption>Abitudini<span>Latif Monet</span></figcaption></figure>
+        <figure><img src="img/k_avvelenato.jpg" alt="Cover di Avvelenato" loading="lazy"><figcaption>Avvelenato<span>Fandy</span></figcaption></figure>
+        <figure><img src="img/k_soldi.jpg" alt="Cover di Soldi" loading="lazy"><figcaption>Soldi<span>Kriim</span></figcaption></figure>
+        <figure><img src="img/k_volo.jpg" alt="Cover di Volo" loading="lazy"><figcaption>Volo<span>Andr3w</span></figcaption></figure>
+        <figure><img src="img/k_fastlife.jpg" alt="Cover di Fast Life" loading="lazy"><figcaption>Fast Life<span>Fandy</span></figcaption></figure>
+        <figure><img src="img/k_vicolo.jpg" alt="Cover di Vicolo" loading="lazy"><figcaption>Vicolo<span>Commando ft. Real Esse, okeychico</span></figcaption></figure>
+        <figure><img src="img/k_euro.jpg" alt="Cover di €uro" loading="lazy"><figcaption>€uro<span>Yambo</span></figcaption></figure>
+        <figure><img src="img/k_gover.jpg" alt="Cover di Gover" loading="lazy"><figcaption>Gover<span>Simo</span></figcaption></figure>
+        <figure><img src="img/k_buiopesto.jpg" alt="Cover di Buio Pesto" loading="lazy"><figcaption>Buio Pesto<span>Willy Boy</span></figcaption></figure>
+        <figure><img src="img/k_illusione.jpg" alt="Cover di Illusione Manipolazione" loading="lazy"><figcaption>Illusione Manipolazione<span>Real Esse</span></figcaption></figure>
+        <figure><img src="img/k_gangstas.jpg" alt="Cover di Gangsta's Paradise" loading="lazy"><figcaption>Gangsta's Paradise<span>Yambo</span></figcaption></figure>
+        <figure><img src="img/k_ispirame.jpg" alt="Cover di Ispirame" loading="lazy"><figcaption>Ispirame<span>Fandy</span></figcaption></figure>
+        <figure><img src="img/k_milly.jpg" alt="Cover di Milly" loading="lazy"><figcaption>Milly<span>Commando</span></figcaption></figure>
+        <figure><img src="img/k_okchico.jpg" alt="Cover di Ok Chico" loading="lazy"><figcaption>Ok Chico<span>okeychico</span></figcaption></figure>
+        <figure><img src="img/k_basic.jpg" alt="Cover di Basic" loading="lazy"><figcaption>Basic<span>Yambo ft. Fandy</span></figcaption></figure>
+        <figure><img src="img/k_flashback.jpg" alt="Cover di Flashback" loading="lazy"><figcaption>Flashback<span>Ryuk ZC</span></figcaption></figure>
+        <figure><img src="img/k_uomini.jpg" alt="Cover di Anche gli uomini soffrono" loading="lazy"><figcaption>Anche gli uomini soffrono<span>Rnawa</span></figcaption></figure>
+        <figure><img src="img/k_lavivo.jpg" alt="Cover di La vivo ancora" loading="lazy"><figcaption>La vivo ancora<span>Ryuk ZC</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- INHABIT SOUND -->
+  <section class="case" id="inhabit">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Visual system · Allestimento</p>
+          <h2 class="display">Inhabit Sound</h2>
+        </div>
+        <div>
+          <p class="kicker">Tradurre i suoni di Milano in segni. La grafica di un padiglione acustico esposto all'ADI Design Museum.</p>
+          <dl class="meta">
+            <div><dt class="label">Committenti</dt><dd>School of Sustainability × MINI – BMW Group</dd></div>
+            <div><dt class="label">Ruolo</dt><dd>Progetto di team; sound drawing e visual</dd></div>
+            <div><dt class="label">Anno</dt><dd>2023</dd></div>
+            <div><dt class="label">Output</dt><dd>Poster, legenda grafica dei suoni, pannelli espositivi</dd></div>
+          </dl>
+          <div class="body">
+            <div><h3>Il brief</h3><p>Tesi del Master in Architettura e Design Sostenibile, con la direzione di Renzo Vitale, Sound Creative Director di BMW Group: sensibilizzare sul comfort acustico in città.</p></div>
+            <div><h3>La soluzione grafica</h3><p>“City Sound Milan” è una legenda che assegna un segno a ogni suono urbano, dal traffico alle campane. Onde, spirali e ritmi diventano poster e pannelli che accompagnano il percorso nel padiglione.</p></div>
+            <div><h3>Il padiglione</h3><p>Un percorso sonoro a doppia spirale riproduce i suoni della città nel presente e nel futuro. Al centro, una camera per il comfort acustico allestita con i pannelli Caimi. Il padiglione è stato esposto all'ADI Design Museum di Milano.</p></div>
+          </div>
+          <a class="klink" href="https://www.ad-italia.it/article/mini-inhabit-sound-cucinella-adi-museum-milano/" style="margin-top:18px"><span>Leggi l'articolo su AD Italia ↗</span></a>
+        </div>
+      </div>
+      <div class="grid g-sound">
+        <div class="wide duo"><img src="img/is_posters_wide.jpg" alt="Due poster Inhabit Sound con onde sonore sopra architetture milanesi" loading="lazy"><img src="img/is_pavilion.jpg" alt="Il padiglione Inhabit Sound esposto all'ADI Design Museum" loading="lazy"></div>
+        <img src="img/is_panel.jpg" alt="Pannello espositivo Inhabit Sound al museo ADI" loading="lazy">
+        <div class="stack">
+          <img src="img/is_citysound_a.jpg" alt="Poster City Sound Milan, legenda dei suoni" loading="lazy">
+          <img src="img/is_citysound_b.jpg" alt="Poster City Sound Milan, variante con partitura" loading="lazy">
+          <img class="wide" src="img/is_people.jpg" alt="Visitatori dentro il padiglione Inhabit Sound" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IDENTITA -->
+  <section class="case" id="identita">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Brand identity</p>
+          <h2 class="display">Marchi e immagine coordinata</h2>
+        </div>
+        <div>
+          <p class="kicker">Marchi per attività locali e piccole imprese: ristorazione, olio, immobiliare, consulenza, trasporti, illuminazione.</p>
+          <div class="body">
+            <div><h3>Il brand design</h3><p>Il brand design costruisce il modo in cui un'azienda si presenta: nome, marchio, colori, caratteri e tono. Un'identità coerente rende l'azienda riconoscibile a colpo d'occhio e trasmette fiducia prima ancora di una parola.</p></div>
+            <div><h3>Un logo che parla dell'azienda</h3><p>Il logo è il punto di partenza. Un buon marchio nasce dall'ascolto dell'azienda e ne racconta i valori e il mestiere in un segno semplice, che funziona su un biglietto da visita come su un'insegna, in stampa come sullo schermo.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-logos">
+        <figure class="logo"><img src="img/logo_giricasa.jpg" alt="Logo GiriCasa Immobiliare" loading="lazy"><figcaption>GiriCasa · Immobiliare</figcaption></figure>
+        <figure class="logo"><img src="img/logo_baretto.jpg" alt="Logo Il Baretto" loading="lazy"><figcaption>Il Baretto · Food &amp; drink</figcaption></figure>
+        <figure class="logo"><img src="img/logo_balbo.jpg" alt="Logo Ludovico Balbo" loading="lazy"><figcaption>Ludovico Balbo · Commercialista</figcaption></figure>
+        <figure class="logo"><img src="img/logo_nicolo.jpg" alt="Logo Nicolò Balbo" loading="lazy"><figcaption>Nicolò Balbo · Curatore del paesaggio</figcaption></figure>
+        <figure class="logo"><img src="img/logo_carmen.jpg" alt="Logo Le delizie di Carmen" loading="lazy"><figcaption>Le delizie di Carmen · Ristorante</figcaption></figure>
+        <figure class="logo"><img src="img/logo_auriva.jpg" alt="Logo AuRiva" loading="lazy"><figcaption>AuRiva · Olio taggiasco</figcaption></figure>
+        <figure class="logo"><img src="img/logo_buratto.jpg" alt="Logo Buratto" loading="lazy"><figcaption>Buratto · Pizza in teglia</figcaption></figure>
+        <figure class="logo"><img src="img/logo_chefinpasta.jpg" alt="Logo Chef in Pasta" loading="lazy"><figcaption>Chef in Pasta</figcaption></figure>
+      </div>
+
+      <div class="sub-h"><h3>Immagine coordinata</h3><p>Concept di immagine coordinata aziendale dei loghi realizzati per i seguenti clienti: GiriCasa, Spirito, AuRiva, Re+, Cave Littardi, LBPLAN e Chef in Pasta.</p></div>
+      <div class="mood">
+        <figure class="s7 r32"><img src="img/mb_giricasa.jpg" alt="Immagine coordinata GiriCasa: taccuino, carta intestata, biglietti, tazza, portachiavi" loading="lazy"><figcaption>GiriCasa · Immobiliare</figcaption></figure>
+        <figure class="s5"><img src="img/mb_spirito.jpg" alt="Merchandising Spirito: t-shirt, felpa, cappelli, borraccia" loading="lazy"><figcaption>Spirito · Merchandising</figcaption></figure>
+        <figure class="s4" style="aspect-ratio:3/4"><img src="img/mb_auriva_full.jpg" style="object-position:center center" alt="Bottiglia di olio AuRiva con etichetta nera e rame" loading="lazy"><figcaption>AuRiva · Packaging</figcaption></figure>
+        <figure class="s8"><img src="img/mb_replus.jpg" alt="Immagine coordinata Re+: cartoncino, quaderno kraft, biglietti da visita" loading="lazy"><figcaption>Re+ · Lampade sostenibili</figcaption></figure>
+        <figure class="s8 r32" style="aspect-ratio:2/1"><img src="img/mb_cavelittardi.jpg" alt="Immagine coordinata Cave Littardi con stampa a caldo color rame" loading="lazy"><figcaption>Cave Littardi</figcaption></figure>
+        <figure class="s4"><img src="img/mb_bplan.jpg" alt="Immagine coordinata LBPLAN: taccuini, carta intestata, buste, biglietti" loading="lazy"><figcaption>LBPLAN · Business plan</figcaption></figure>
+        <figure class="s12 r125"><img src="img/mb_chefinpasta.jpg" alt="Immagine coordinata Chef in Pasta: biglietti, buste, t-shirt, timbro" loading="lazy"><figcaption>Chef in Pasta</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL -->
+  <section class="case" id="digital">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Campagne pubblicitarie</p>
+          <h2 class="display">Social e adv</h2>
+        </div>
+        <div>
+          <p class="kicker">Campagne pensate per ogni formato: dallo schermo dello smartphone allo stand in fiera, con un unico linguaggio.</p>
+          <dl class="meta">
+            <div><dt class="label">Digital</dt><dd>Storie e post social, banner web, e-commerce</dd></div>
+            <div><dt class="label">Stampa</dt><dd>Roll-up, pannelli, locandine, materiali per fiere ed eventi</dd></div>
+          </dl>
+          <div class="body">
+            <div><h3>Digital · smartphone e web</h3><p>Campagne pensate per lo schermo: storie e post per i social, banner e contenuti per siti ed e-commerce. Promozioni stagionali, lanci di prodotto, vendite online. Formati verticali costruiti per lo scroll, con un messaggio chiaro e una sola azione per contenuto.</p></div>
+            <div><h3>Stampa · supporti fisici</h3><p>La stessa campagna portata su roll-up, pannelli, locandine e materiali per fiere ed eventi. Impaginazioni leggibili a distanza, capaci di spiegare anche un prodotto tecnico in pochi punti, coerenti con la comunicazione digitale.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-digital">
+        <figure><img src="img/dig_story_a.jpg" alt="Storia Instagram per una promozione natalizia" loading="lazy"></figure>
+        <figure><img src="img/dig_story_b.jpg" alt="Storia Instagram online wine shop" loading="lazy"></figure>
+        <figure><img src="img/dig_story_c.jpg" alt="Storia Instagram con la scheda di un vino" loading="lazy"></figure>
+        <figure><img src="img/dig_roll_a.jpg" alt="Roll-up per fiera con la gamma di prodotti" loading="lazy"></figure>
+        <figure><img src="img/dig_roll_c.jpg" alt="Roll-up per fiera di un prodotto tecnico" loading="lazy"></figure>
+        <figure><img src="img/dig_roll_b.jpg" alt="Roll-up per fiera con il dettaglio dei modelli" loading="lazy"></figure>
+      </div>
+      <div class="subcap label"><span>Digital · Instagram stories</span><span>Stampa · Roll-up per fiera</span></div>
+    </div>
+  </section>
+
+  <!-- CCREATIVE ART -->
+  <section class="case" id="art">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Progetto personale · @ccreative__art</p>
+          <h2 class="display">CCreative Art</h2>
+        </div>
+        <div>
+          <p class="kicker">Collage digitali che prendono oggetti quotidiani e luoghi reali e li ricompongono in prospettive impossibili.</p>
+          <div class="body">
+            <div><h3>L'idea</h3><p>Ogni elemento viene tolto dal suo contesto e unito ad altri per creare una realtà nuova: una tazza di caffè diventa un deserto, un vinile una pista d'atletica, una focaccia la luna.</p></div>
+            <div><h3>Perché è qui</h3><p>È il laboratorio dove alleno fotomontaggio, color grading e postproduzione in Photoshop. Le stesse tecniche entrano ogni giorno nelle cover e nelle campagne.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="grid g-land">
+        <img src="img/cc_caffe.jpg" alt="Collage: carovana di cammelli nella schiuma di una tazza di caffè" loading="lazy">
+        <img src="img/cc_vinile.jpg" alt="Collage: velocisti che corrono sul solco di un vinile" loading="lazy">
+        <img src="img/cc_crackermoon.jpg" alt="Collage: una focaccia al posto della luna in un cielo stellato" loading="lazy">
+        <img src="img/cc_tuffo.jpg" alt="Collage: tuffatore tra le facciate di un vicolo che si aprono sul mare" loading="lazy">
+        <img src="img/cc_libreria.jpg" alt="Collage: libreria che contiene i balconi di un palazzo" loading="lazy">
+        <img src="img/cc_corallo.jpg" alt="Collage: albero di corallo rosso sopra una panchina" loading="lazy">
+      </div>
+      <div class="grid g-art">
+        <img src="img/cc_pozzanghera.jpg" alt="Collage: bambino che guarda nella pozzanghera un mondo capovolto" loading="lazy">
+        <img src="img/art_lampione.jpg" alt="Collage: lampione con la luna come lampada" loading="lazy">
+        <img src="img/cc_deserto.jpg" alt="Collage: duna di sabbia che diventa una cupola" loading="lazy">
+        <img src="img/art_torre.jpg" alt="Collage: torre sommersa vista dall'alto" loading="lazy">
+        <img src="img/art_tunnel.jpg" alt="Collage: tunnel che si apre sul mare" loading="lazy">
+        <img src="img/cc_onda.jpg" alt="Collage: onda di schiuma sotto la luna" loading="lazy">
+        <img src="img/art_canoa.jpg" alt="Collage: canoa tra le nuvole capovolte" loading="lazy">
+        <img src="img/cc_scalatore.jpg" alt="Collage: scalatore su una parete fatta di mare" loading="lazy">
+        <img src="img/art_galleria.jpg" alt="Collage: galleria con auto rossa" loading="lazy">
+        <img src="img/cc_vulcano.jpg" alt="Collage: vasetto di spezie che diventa un vulcano" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO -->
+  <section class="case also" id="also">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <p class="label">Oltre la grafica</p>
+          <h2 class="display">3D, prodotto e spazio</h2>
+        </div>
+        <div>
+          <p class="kicker">Oggetti progettati e realizzati fino al prototipo, poi esposti alla Genova Design Week. Di ogni progetto curo anche l'immagine: disegni tecnici, flyer e comunicazione dell'allestimento.</p>
+          <dl class="meta">
+            <div><dt class="label">Software</dt><dd>Rhinoceros, KeyShot, Twinmotion</dd></div>
+            <div><dt class="label">Esposizioni</dt><dd>Genova Design Week 2025 (BLOOM) e 2026 (ECLITTICA)</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="feat">
+        <figure>
+          <div class="pair three"><img src="img/bloom_foto.jpg" style="object-position:center 30%" alt="BLOOM esposto alla Genova Design Week con cappello e foulard" loading="lazy"><img src="img/bloom_dettaglio2.jpg" style="object-position:center 45%" alt="Dettaglio dell'appendiabiti in acciaio di BLOOM aperto" loading="lazy"><div class="draw"><img src="img/bloom_2d.jpg" alt="BLOOM, disegni tecnici" loading="lazy"></div></div>
+          <div class="strip" style="background:#FFFFFF"><img src="img/bloom_top.jpg" alt="BLOOM, vista dall'alto" loading="lazy"><p style="max-width:44ch"><span>Vista dall'alto</span>Gli appendiabiti in acciaio sono incassati nel legno: si aprono ruotando e, chiusi, scompaiono nella sagoma del palo.</p></div>
+          <figcaption><div><b>BLOOM</b><span class="label">Attaccapanni · Genova Design Week 2025 · con Lorenzo Ferraris</span><p>Un attaccapanni essenziale che unisce legno e acciaio. Il palo verticale richiama un tronco e dà stabilità; gli appendiabiti si aprono a ventaglio come foglie in primavera. Chiuso, BLOOM torna una linea pura e diventa un promemoria silenzioso sulla deforestazione.</p></div></figcaption>
+        </figure>
+        <figure>
+          <div class="pair three"><img src="img/ecl_foto_tavolo.jpg" style="object-position:15% 35%" alt="ECLITTICA accesa su un tavolino" loading="lazy"><img src="img/ecl_foto_mano.jpg" style="object-position:85% center" alt="Una mano inclina l'asta di ECLITTICA" loading="lazy"><img src="img/ecl_foto_verticale.jpg" style="object-position:center 30%" alt="ECLITTICA con l'asta in verticale" loading="lazy"></div>
+          <div class="strip" style="background:#EEEFEA"><img src="img/ecl_2d.png" alt="ECLITTICA, le posizioni della rotazione di 180 gradi" loading="lazy"><p><span>Movimento di 180°</span>L'asta ruota sul perno e la sfera attraversa lo spazio, dall'alba al tramonto.</p></div>
+          <figcaption><div><b>ECLITTICA</b><span class="label">Lampada in acciaio · Genova Design Week 2026</span><p>Una lampada in acciaio ispirata all'orbita apparente del Sole intorno alla Terra. Due triangoli e un'asta sostengono la sfera luminosa, che prende vita con un delicato movimento di 180 gradi. Come il Sole che sorge e tramonta, porta nello spazio un ritmo naturale e silenzioso: un invito a rallentare, osservare e cambiare prospettiva. Dedicata al Sole, a ogni alba e a ogni tramonto.</p></div></figcaption>
+        </figure>
+        <figure>
+          <div class="pair"><img src="img/also_strampelli.jpg" style="object-position:center" alt="Collezione Strampelli" loading="lazy"><img src="img/also_strampelli2.jpg" style="object-position:center" alt="Collezione Strampelli, dettaglio" loading="lazy"></div>
+          <div class="strip" style="background:#FFFFFF"><img src="img/also_strampelli_pattern.jpg" alt="Collezione Strampelli, disegno tecnico" loading="lazy"></div>
+          <figcaption><div><b>Collezione Strampelli</b><span class="label">Mardegan Legno · School of Sustainability · 2023</span><p>Capsule collection in legno e pietra ispirata all'agronomo Nazareno Strampelli, che incrociava varietà di grano per crearne di migliori. Le essenze si combinano come i suoi incroci.</p></div><div class="award"><img src="img/also_archiproducts.jpg" alt="Logo Archiproducts Design Awards"><span class="label">Vincitore Archiproducts Design Awards 2023</span></div></figcaption>
+        </figure>
+        <figure>
+          <div class="pair"><img src="img/also_ladar.jpg" style="object-position:center" alt="LADAR MK3" loading="lazy"><img src="img/also_ladar2.jpg" style="object-position:center" alt="LADAR MK3, dettaglio" loading="lazy"></div>
+          <div class="strip" style="background:#FFFFFF"><img src="img/also_ladar_exploded.jpg" alt="LADAR MK3, disegno tecnico" loading="lazy"></div>
+          <figcaption><div><b>LADAR MK3</b><span class="label">Offshore Monitoring · Marine technology</span><p>Modellazione 3D e rendering della camera LADAR MK3 per il monitoraggio marino: viste di prodotto ed esploso dei componenti.</p></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="case" id="profilo">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <p class="label">Profilo</p>
+          <h2 class="display" style="font-size:clamp(34px,4vw,56px);margin:10px 0 18px">Chi sono</h2>
+          <img src="img/ritratto.jpg" alt="Ritratto di Carlo Caire" style="width:120px;height:148px;object-fit:cover;object-position:center 30%;margin-bottom:18px">
+          <p>Sono un designer con base a Milano. Dal 2024 curo grafica e direzione creativa per Kayros Music, etichetta discografica sotto Universal Music. Dal 2026 insegno Graphic Design alla Ferrari Fashion School di Milano.</p>
+      <p class="igrow"><a class="ig" href="https://www.instagram.com/kayrosmusicofficial/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@kayrosmusicofficial</a><a class="ig" href="https://www.instagram.com/ferrarifashionschool/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@ferrarifashionschool</a></p>
+          <p>Lavoro come freelancer dal 2019, progettando marchi, immagini coordinate e campagne per aziende e privati. Con Grow Events organizzo eventi musicali e culturali, curandone il concept e la grafica.</p>
+      <p class="igrow"><a class="ig" href="https://www.instagram.com/grow.events/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@grow.events</a><a class="ig" href="https://www.instagram.com/spaziocharlie/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@spaziocharlie</a><a class="ig" href="https://www.instagram.com/ccreative__art/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@ccreative__art</a></p>
+          <p>Laurea magistrale in Design del Prodotto e dell'Evento a Genova, Master in Architettura e Design Sostenibile alla School of Sustainability di Mario Cucinella.</p>
+      <p class="igrow"><a class="ig" href="https://www.instagram.com/sos_schoolofsustainability/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@sos_schoolofsustainability</a><a class="ig" href="https://www.instagram.com/unigenova/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.4" fill="currentColor"/></svg>@unigenova</a></p>
+          <p><b>Disponibile</b> per collaborazioni in-house, part-time o a progetto su Milano.</p>
+          <p class="igrow"><a class="ig" href="https://www.linkedin.com/in/carlo-caire/"><svg class="igi" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="4" fill="none" stroke="currentColor" stroke-width="2.2"/><rect x="6.6" y="10" width="2.4" height="7.4" fill="currentColor"/><circle cx="7.8" cy="7.2" r="1.45" fill="currentColor"/><path d="M11.3 10h2.3v1.1c.5-.8 1.4-1.3 2.6-1.3 2 0 3 1.3 3 3.6v4H16.8v-3.6c0-1.1-.4-1.7-1.3-1.7-.9 0-1.6.6-1.6 1.8v3.5h-2.6z" fill="currentColor"/></svg>linkedin.com/in/carlo-caire</a></p>
+        </div>
+        <div>
+          <h3 class="label">Cosa posso fare per il vostro team</h3>
+          <ul>
+            <li>Brand identity e loghi<span>Dal marchio all'immagine coordinata</span></li>
+            <li>Art direction e cover artwork<span>Musica, campagne, key visual</span></li>
+            <li>Social e digital adv<span>Storie, post, banner, promo stagionali</span></li>
+            <li>Packaging ed etichette<span>Esecutivi per la stampa</span></li>
+            <li>Stampa ed eventi<span>Roll-up, pannelli, allestimenti, locandine</span></li>
+            <li>Progettazione di prodotto<span>Dal concept al prototipo, disegni tecnici</span></li>
+            <li>Mockup e rendering 3D<span>Prodotti e spazi prima della produzione</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="label">Strumenti</h3>
+          <ul>
+            <li>Illustrator · Photoshop · InDesign<span>Grafica, fotoritocco, impaginazione</span></li>
+            <li>Premiere<span>Montaggio video</span></li>
+            <li>Gemini · Claude<span>Intelligenza artificiale per ricerca, concept e flussi di lavoro</span></li>
+            <li>Rhinoceros · KeyShot · Twinmotion<span>3D e rendering</span></li>
+          </ul>
+          <h3 class="label" style="margin-top:28px">Riconoscimenti</h3>
+          <ul>
+            <li>Vincitore Archiproducts Design Awards 2023<span>Collezione Strampelli</span></li>
+            <li>Genova Design Week 2025 e 2026<span>BLOOM ed ECLITTICA in mostra</span></li>
+            <li>ADI Design Museum, Milano<span>Inhabit Sound in mostra, 2023</span></li>
+            <li>Premio della Giuria, FAV Montpellier 2018<span>Installazione “Urban Living Room”</span></li>
+          </ul>
+          <h3 class="label" style="margin-top:28px">Lingue</h3>
+          <ul><li>Italiano · Inglese · Francese</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contatti">
+    <div class="wrap">
+      <p class="label">Contatti</p>
+      <div class="contact-top">
+        <h2 class="display">Lavoriamo<br><em>insieme.</em></h2>
+        <img class="lg-d" src="img/logo_cc_dark.png" alt=""><img class="lg-l" src="img/logo_cc_light.png" alt="">
+      </div>
+      <div class="c-rows">
+        <div><p class="label">Email</p><p class="v" id="mail">crlcaire@gmail.com</p><button class="copy" id="copy-mail" type="button">Copia email</button></div>
+        <div><p class="label">Telefono</p><p class="v">+39 340 456 4755</p></div>
+        <div><p class="label">Città</p><p class="v">Milano</p></div>
+        <div><p class="label">Online</p><p class="v"><a href="https://www.instagram.com/ccreative__art/">Instagram @ccreative__art</a><br><a href="https://www.instagram.com/spaziocharlie/">Instagram @spaziocharlie</a><br><a href="https://www.linkedin.com/in/carlo-caire/">LinkedIn: Carlo Caire</a></p></div>
+      </div>
+      <a class="klink" href="Carlo_Caire_Portfolio_Graphic_2026.pdf" download style="margin-top:32px"><span>Scarica il portfolio in PDF ↓</span></a>
+    </div>
+  </section>
+</main>
+<footer class="wrap label"><span>© 2026 Carlo Caire</span><span>Graphic design · Art direction · Milano</span></footer>
+
+<script>
+document.getElementById('copy-mail').addEventListener('click',function(){
+  var b=this, t=document.getElementById('mail').textContent.trim();
+  function done(){b.textContent='Email copiata';setTimeout(function(){b.textContent='Copia email'},2000)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selezionata: premi Ctrl+C'}
+  try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+</body>
+</html>
