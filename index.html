@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1018">
+<meta name="color-scheme" content="dark">
 <title>Carlo Caire · Graphic designer · Milano</title>
 <meta name="description" content="Portfolio di Carlo Caire, graphic designer e direttore creativo a Milano: cover artwork, brand identity, campagne pubblicitarie e progettazione di prodotto.">
 <meta property="og:title" content="Carlo Caire · Portfolio">
 <meta property="og:description" content="Graphic designer e direttore creativo a Milano.">
 <meta property="og:image" content="img/k_karaba.jpg">
-<link rel="icon" type="image/png" href="img/logo_cc_dark.png">
-<style>html{-webkit-text-size-adjust:100%}body{margin:0}[hidden]{display:none!important}</style>
+<link rel="icon" type="image/png" href="img/logo_cc_light.png">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top,0px)}</style>
 </head>
 <body>
 <style>
@@ -18,28 +20,15 @@
 @font-face{font-family:"Mont Heavy";src:url("fonts/mont-heavy.woff") format("woff");font-weight:800;font-display:swap}
 
 :root{
-  --paper:#EEF0F4; --paper-2:#E3E6ED; --ink:#121420; --muted:#5A6072; --line:#C9CEDA;
-  --accent:#2F3DDB; --on-accent:#FFFFFF; --tile:#FFFFFF;
+  color-scheme:dark;
+  --paper:#0E1018; --paper-2:#161926; --ink:#E8EAF2; --muted:#9BA1B6; --line:#2A2F40;
+  --accent:#8C96FF; --on-accent:#0E1018; --tile:#F3F4F8; --deep:#07080D;
   --f-display:"Mont Heavy","Mont","Montserrat","Helvetica Neue",Arial,sans-serif;
   --f-text:"Mont","Montserrat","Helvetica Neue",Arial,sans-serif;
   --gut:clamp(16px,4vw,56px);
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --paper:#0E1018; --paper-2:#161926; --ink:#E8EAF2; --muted:#9BA1B6; --line:#2A2F40;
-    --accent:#8C96FF; --on-accent:#0E1018; --tile:#F3F4F8;
-  }
-  :root:not([data-theme="light"]) .lg-d{display:none}
-  :root:not([data-theme="light"]) .lg-l{display:block}
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --paper:#0E1018; --paper-2:#161926; --ink:#E8EAF2; --muted:#9BA1B6; --line:#2A2F40;
-  --accent:#8C96FF; --on-accent:#0E1018; --tile:#F3F4F8;
-}
-:root[data-theme="dark"] .lg-d{display:none}
-:root[data-theme="dark"] .lg-l{display:block}
+html{background:var(--paper)}
+.lg-d{display:none!important}
 
 *{box-sizing:border-box}
 body{text-rendering:geometricPrecision;font-kerning:normal;background:var(--paper);color:var(--ink);font-family:var(--f-text);font-size:15.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -47,7 +36,7 @@ img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .wrap{padding-inline:var(--gut);max-width:1440px;margin-inline:auto}
-.lg-l{display:none}
+.lg-l{display:block}
 
 .label{font-family:var(--f-text);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
 .display{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
@@ -145,9 +134,7 @@ section.case{padding-block:clamp(56px,8vw,112px);border-top:1px solid var(--line
 .g-art img{width:100%;aspect-ratio:3/4.15;object-fit:cover}
 @media (max-width:760px){.g-land{grid-template-columns:1fr 1fr}.g-art{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-.also{background:var(--ink);color:var(--paper);border-top:0}
-.also .label{color:color-mix(in srgb,var(--paper) 62%,var(--ink))}
-.also .meta div{border-color:color-mix(in srgb,var(--paper) 22%,var(--ink))}
+.also{background:var(--deep);color:var(--ink);border-top:1px solid var(--line)}
 .feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,3.4vw,48px) clamp(16px,2vw,28px)}
 .feat figure{margin:0;display:flex;flex-direction:column;gap:8px}
 .feat .pair{display:grid;grid-template-columns:1.55fr 1fr;grid-template-rows:100%;gap:8px;aspect-ratio:2/1}
@@ -200,6 +187,56 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
 .klink{display:inline-flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:24px;text-decoration:none;font-size:13px;font-weight:600}
 .klink img{width:88px;height:auto}
 .klink:hover span{color:var(--accent)}
+
+/* ---------- mobile menu ---------- */
+[hidden]{display:none!important}
+.burger{display:none;width:44px;height:44px;border:0;background:transparent;padding:10px;cursor:pointer;flex-direction:column;justify-content:center;gap:6px}
+.burger span{display:block;height:2px;background:var(--ink);border-radius:2px}
+.menu{position:fixed;inset:0;z-index:50;background:var(--deep);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);overflow-y:auto}
+.menu>.wrap{width:100%}
+.menu-top{display:flex;justify-content:space-between;align-items:center;padding-block:10px;border-bottom:1px solid var(--line)}
+.menu-x{width:44px;height:44px;border:0;background:transparent;color:var(--ink);font-size:34px;line-height:1;cursor:pointer}
+.menu-nav{display:flex;flex-direction:column;padding-block:16px;flex:1}
+.menu-nav a{display:flex;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:clamp(24px,7vw,34px);letter-spacing:-.01em;line-height:1}
+.menu-nav a small{font-family:var(--f-text);font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--accent)}
+.menu-nav a:active{color:var(--accent)}
+.menu-foot{padding-block:18px 28px;margin:0}
+@media (max-width:760px){.burger{display:flex}}
+
+/* ---------- carousels (phone) ---------- */
+.car-ctl{display:none}
+@media (max-width:760px){
+  .car{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px!important;scrollbar-width:none;overscroll-behavior-x:contain;
+       margin-inline:calc(-1*var(--gut));padding-inline:var(--gut);scroll-padding-inline:var(--gut)}
+  .car::-webkit-scrollbar{display:none}
+  .car>*{flex:0 0 84%;scroll-snap-align:start;grid-column:auto!important;min-width:0}
+  .hmood.car>*,.mood.car>*{aspect-ratio:4/3!important;height:auto}
+  .g-sound.car .duo,.g-sound.car .stack{display:contents}
+  .g-sound.car img{flex:0 0 84%;aspect-ratio:4/3;height:auto;scroll-snap-align:start}
+  .g-covers.car>*{flex-basis:72%}
+  .g-logos.car>*{flex-basis:72%}
+  .g-art.car>*{flex-basis:64%}
+  .g-digital.car{margin-inline:0;padding:18px;scroll-padding-inline:18px;align-items:end}
+  .g-digital.car>*{flex-basis:46%}
+  .car-ctl{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+  .car-ctl button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:18px;line-height:1;cursor:pointer}
+  .car-ctl button:disabled{opacity:.3}
+  .car-ctl .n{font-size:12px;font-weight:600;letter-spacing:.14em;color:var(--muted);font-variant-numeric:tabular-nums}
+  .car-ctl .full{width:auto;border-radius:22px;padding:0 16px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+}
+
+/* ---------- lightbox slideshow ---------- */
+.zoomable{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:60;background:#05060A;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);touch-action:pan-y}
+.lb-top{display:flex;justify-content:space-between;align-items:center;padding:8px var(--gut)}
+.lb-top .n{font-size:12px;font-weight:600;letter-spacing:.14em;color:#9BA1B6;font-variant-numeric:tabular-nums}
+.lb-x{width:44px;height:44px;border:0;background:transparent;color:#E8EAF2;font-size:34px;line-height:1;cursor:pointer}
+.lb-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 var(--gut);position:relative}
+.lb-stage img{max-width:100%;max-height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.lb-cap{min-height:44px;padding:10px var(--gut) 18px;text-align:center;color:#C9CEDA;font-size:13px;line-height:1.4}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:1px solid #2A2F40;background:rgba(14,16,24,.7);color:#E8EAF2;font-size:20px;cursor:pointer}
+.lb-prev{left:12px}.lb-next{right:12px}
+@media (max-width:760px){.lb-nav{display:none}}
 </style>
 
 <header class="bar">
@@ -215,10 +252,29 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
       <a href="#digital">Social e adv</a>
       <a href="#art">CCreative Art</a>
       <a href="#also">Prodotto</a>
+      <a href="#profilo">Profilo</a>
       <a href="#contatti">Contatti</a>
     </nav>
+    <button class="burger" id="burger" type="button" aria-label="Apri il menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="menu" id="menu" hidden>
+  <div class="menu-top wrap">
+    <img src="img/logo_cc_light.png" alt="Logo Carlo Caire" style="width:40px">
+    <button class="menu-x" id="menu-x" type="button" aria-label="Chiudi il menu">×</button>
+  </div>
+  <nav class="wrap menu-nav" aria-label="Menu">
+    <a href="#kayros"><small>01</small>Kayros Music</a>
+    <a href="#inhabit"><small>02</small>Inhabit Sound</a>
+    <a href="#identita"><small>03</small>Identità</a>
+    <a href="#digital"><small>04</small>Social e adv</a>
+    <a href="#art"><small>05</small>CCreative Art</a>
+    <a href="#also"><small>06</small>Prodotto</a>
+    <a href="#profilo"><small>07</small>Profilo</a>
+    <a href="#contatti"><small>08</small>Contatti</a>
+  </nav>
+  <p class="wrap menu-foot label">crlcaire@gmail.com · +39 340 456 4755</p>
+</div>
 
 <main id="top">
   <div class="wrap hero">
@@ -239,7 +295,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
   </div>
 
   <div class="wrap">
-    <div class="hmood" aria-label="Selezione di lavori">
+    <div class="hmood car" aria-label="Selezione di lavori">
       <figure class="h3"><img src="img/k_karaba.jpg" alt="Cover di Karabà, Latif Monet"></figure>
       <figure class="h4"><img src="img/is_posters_wide.jpg" alt="Poster Inhabit Sound"></figure>
       <figure class="h5"><img src="img/mb_giricasa.jpg" alt="Immagine coordinata GiriCasa"></figure>
@@ -275,7 +331,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
           </div>
         </div>
       </div>
-      <div class="grid g-covers">
+      <div class="grid g-covers car">
         <figure><img src="img/k_karaba.jpg" alt="Cover di Karabà" loading="lazy"><figcaption>Karabà<span>Latif Monet</span></figcaption></figure>
         <figure><img src="img/k_mamuthones.jpg" alt="Cover di Mamuthones" loading="lazy"><figcaption>Mamuthones<span>Latif Monet</span></figcaption></figure>
         <figure><img src="img/k_abitudini.jpg" alt="Cover di Abitudini" loading="lazy"><figcaption>Abitudini<span>Latif Monet</span></figcaption></figure>
@@ -324,7 +380,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
           <a class="klink" href="https://www.ad-italia.it/article/mini-inhabit-sound-cucinella-adi-museum-milano/" style="margin-top:18px"><span>Leggi l'articolo su AD Italia ↗</span></a>
         </div>
       </div>
-      <div class="grid g-sound">
+      <div class="grid g-sound car">
         <div class="wide duo"><img src="img/is_posters_wide.jpg" alt="Due poster Inhabit Sound con onde sonore sopra architetture milanesi" loading="lazy"><img src="img/is_pavilion.jpg" alt="Il padiglione Inhabit Sound esposto all'ADI Design Museum" loading="lazy"></div>
         <img src="img/is_panel.jpg" alt="Pannello espositivo Inhabit Sound al museo ADI" loading="lazy">
         <div class="stack">
@@ -352,7 +408,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
           </div>
         </div>
       </div>
-      <div class="grid g-logos">
+      <div class="grid g-logos car">
         <figure class="logo"><img src="img/logo_giricasa.jpg" alt="Logo GiriCasa Immobiliare" loading="lazy"><figcaption>GiriCasa · Immobiliare</figcaption></figure>
         <figure class="logo"><img src="img/logo_baretto.jpg" alt="Logo Il Baretto" loading="lazy"><figcaption>Il Baretto · Food &amp; drink</figcaption></figure>
         <figure class="logo"><img src="img/logo_balbo.jpg" alt="Logo Ludovico Balbo" loading="lazy"><figcaption>Ludovico Balbo · Commercialista</figcaption></figure>
@@ -364,7 +420,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
       </div>
 
       <div class="sub-h"><h3>Immagine coordinata</h3><p>Concept di immagine coordinata aziendale dei loghi realizzati per i seguenti clienti: GiriCasa, Spirito, AuRiva, Re+, Cave Littardi, LBPLAN e Chef in Pasta.</p></div>
-      <div class="mood">
+      <div class="mood car">
         <figure class="s7 r32"><img src="img/mb_giricasa.jpg" alt="Immagine coordinata GiriCasa: taccuino, carta intestata, biglietti, tazza, portachiavi" loading="lazy"><figcaption>GiriCasa · Immobiliare</figcaption></figure>
         <figure class="s5"><img src="img/mb_spirito.jpg" alt="Merchandising Spirito: t-shirt, felpa, cappelli, borraccia" loading="lazy"><figcaption>Spirito · Merchandising</figcaption></figure>
         <figure class="s4" style="aspect-ratio:3/4"><img src="img/mb_auriva_full.jpg" style="object-position:center center" alt="Bottiglia di olio AuRiva con etichetta nera e rame" loading="lazy"><figcaption>AuRiva · Packaging</figcaption></figure>
@@ -396,7 +452,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
           </div>
         </div>
       </div>
-      <div class="grid g-digital">
+      <div class="grid g-digital car">
         <figure><img src="img/dig_story_a.jpg" alt="Storia Instagram per una promozione natalizia" loading="lazy"></figure>
         <figure><img src="img/dig_story_b.jpg" alt="Storia Instagram online wine shop" loading="lazy"></figure>
         <figure><img src="img/dig_story_c.jpg" alt="Storia Instagram con la scheda di un vino" loading="lazy"></figure>
@@ -424,7 +480,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
           </div>
         </div>
       </div>
-      <div class="grid g-land">
+      <div class="grid g-land car">
         <img src="img/cc_caffe.jpg" alt="Collage: carovana di cammelli nella schiuma di una tazza di caffè" loading="lazy">
         <img src="img/cc_vinile.jpg" alt="Collage: velocisti che corrono sul solco di un vinile" loading="lazy">
         <img src="img/cc_crackermoon.jpg" alt="Collage: una focaccia al posto della luna in un cielo stellato" loading="lazy">
@@ -432,7 +488,7 @@ footer{padding-block:24px;border-top:1px solid var(--line);display:flex;justify-
         <img src="img/cc_libreria.jpg" alt="Collage: libreria che contiene i balconi di un palazzo" loading="lazy">
         <img src="img/cc_corallo.jpg" alt="Collage: albero di corallo rosso sopra una panchina" loading="lazy">
       </div>
-      <div class="grid g-art">
+      <div class="grid g-art car">
         <img src="img/cc_pozzanghera.jpg" alt="Collage: bambino che guarda nella pozzanghera un mondo capovolto" loading="lazy">
         <img src="img/art_lampione.jpg" alt="Collage: lampione con la luna come lampada" loading="lazy">
         <img src="img/cc_deserto.jpg" alt="Collage: duna di sabbia che diventa una cupola" loading="lazy">
@@ -567,6 +623,75 @@ document.getElementById('copy-mail').addEventListener('click',function(){
   function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('mail'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selezionata: premi Ctrl+C'}
   try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
 });
+</script>
+
+<script>
+(function(){
+  /* menu */
+  var menu=document.getElementById('menu'), burger=document.getElementById('burger');
+  function openMenu(){menu.hidden=false;burger.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+  function closeMenu(){menu.hidden=true;burger.setAttribute('aria-expanded','false');document.body.style.overflow='';}
+  burger.addEventListener('click',openMenu);
+  document.getElementById('menu-x').addEventListener('click',closeMenu);
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+  /* lightbox */
+  var lb=null, list=[], idx=0;
+  function build(){
+    lb=document.createElement('div'); lb.className='lb'; lb.hidden=true; lb.setAttribute('role','dialog'); lb.setAttribute('aria-label','Galleria');
+    lb.innerHTML='<div class="lb-top"><span class="n"></span><button class="lb-x" type="button" aria-label="Chiudi">×</button></div>'+
+      '<div class="lb-stage"><button class="lb-nav lb-prev" type="button" aria-label="Precedente">‹</button><img alt=""><button class="lb-nav lb-next" type="button" aria-label="Successiva">›</button></div><div class="lb-cap"></div>';
+    document.body.appendChild(lb);
+    lb.querySelector('.lb-x').onclick=close;
+    lb.querySelector('.lb-prev').onclick=function(){go(-1)};
+    lb.querySelector('.lb-next').onclick=function(){go(1)};
+    lb.querySelector('.lb-stage').addEventListener('click',function(e){if(e.target===this)close();});
+    var x0=null;
+    lb.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+    lb.addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>40)go(dx<0?1:-1);x0=null;});
+  }
+  function show(){
+    var im=list[idx]; var el=lb.querySelector('.lb-stage img');
+    el.src=im.currentSrc||im.src; el.alt=im.alt||'';
+    lb.querySelector('.lb-cap').textContent=im.alt||'';
+    lb.querySelector('.n').textContent=(idx+1)+' / '+list.length;
+  }
+  function go(d){idx=(idx+d+list.length)%list.length;show();}
+  function open(imgs,i){if(!lb)build();list=imgs;idx=i;show();lb.hidden=false;document.body.style.overflow='hidden';}
+  function close(){lb.hidden=true;document.body.style.overflow='';}
+  document.addEventListener('keydown',function(e){
+    if(lb&&!lb.hidden){if(e.key==='Escape')close();if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1);}
+    else if(!menu.hidden&&e.key==='Escape')closeMenu();
+  });
+
+  var groups=['.hmood','.g-covers','.g-sound','.g-logos','.mood','.g-digital','.g-land','.g-art','.feat'];
+  groups.forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(g){
+      var imgs=[].slice.call(g.querySelectorAll('img'));
+      if(sel==='.g-land'){var nx=g.nextElementSibling; if(nx&&nx.classList.contains('g-art')) imgs=imgs.concat([].slice.call(nx.querySelectorAll('img')));}
+      if(sel==='.g-art'){var pv=g.previousElementSibling; while(pv&&!pv.classList.contains('g-land'))pv=pv.previousElementSibling; if(pv) imgs=[].slice.call(pv.querySelectorAll('img')).concat(imgs);}
+      imgs.forEach(function(im,i){im.classList.add('zoomable');im.addEventListener('click',function(){open(imgs,i);});});
+    });
+  });
+
+  /* phone carousels */
+  document.querySelectorAll('.car').forEach(function(c){
+    var items=c.classList.contains('g-sound')?[].slice.call(c.querySelectorAll('img')):[].slice.call(c.children); if(items.length<2)return;
+    var ctl=document.createElement('div'); ctl.className='car-ctl';
+    ctl.innerHTML='<button type="button" class="p" aria-label="Precedente">←</button><span class="n">1 / '+items.length+'</span>'+
+      '<button type="button" class="full">Slideshow</button><button type="button" class="x" aria-label="Successiva">→</button>';
+    c.parentNode.insertBefore(ctl,c.nextSibling);
+    var n=ctl.querySelector('.n'), p=ctl.querySelector('.p'), x=ctl.querySelector('.x');
+    function pos(it){return it.getBoundingClientRect().left-c.getBoundingClientRect().left+c.scrollLeft-parseFloat(getComputedStyle(c).paddingLeft||0);}
+    function cur(){var l=c.scrollLeft, best=0, bd=1e9; items.forEach(function(it,i){var d=Math.abs(pos(it)-l); if(d<bd){bd=d;best=i;}}); return best;}
+    function upd(){var i=cur(); n.textContent=(i+1)+' / '+items.length; p.disabled=i===0; x.disabled=c.scrollLeft+c.clientWidth>=c.scrollWidth-4;}
+    function to(i){i=Math.max(0,Math.min(items.length-1,i)); c.scrollTo({left:pos(items[i]),behavior:'smooth'});}
+    p.onclick=function(){to(cur()-1)}; x.onclick=function(){to(cur()+1)};
+    ctl.querySelector('.full').onclick=function(){var imgs=[].slice.call(c.querySelectorAll('img.zoomable')); if(imgs.length) open(imgs,Math.min(cur(),imgs.length-1));};
+    c.addEventListener('scroll',function(){window.requestAnimationFrame(upd)},{passive:true});
+    upd();
+  });
+})();
 </script>
 </body>
 </html>
